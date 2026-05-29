@@ -16,3 +16,169 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 36px;
+  color: #2e2f42;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2. Стили для формы поиска */
+.form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.form input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form input:hover {
+  border-color: #000000;
+}
+
+.form input:focus {
+  border-color: #4e75ff;
+}
+
+.form button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #4e75ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form button:hover {
+  background-color: #6c8cff;
+}
+
+/* 3. Стили для сетки галереи */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* 4. Карточка изображения */
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+  /* 3 колонки в ряд */
+  min-width: 280px;
+  max-width: 360px;
+  background: #ffffff;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 200px;
+  /* Фиксированная высота картинок для ровной сетки */
+  overflow: hidden;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Картинки масштабируются без искажений */
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-link:hover .gallery-image {
+  transform: scale(1.04);
+  /* Легкий интерактивный зум при наведении */
+}
+
+/* 5. Блок статистики под картинкой */
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 4px;
+  background-color: #ffffff;
+  border-top: 1px solid #808080;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.33;
+}
+
+.info-item b {
+  font-weight: 600;
+  color: #2e2f42;
+  margin-bottom: 4px;
+}
+
+.info-item span {
+  color: #2e2f42;
+}
+
+.load-more {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #4e75ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  height: 40px;
+  cursor: pointer;
+  margin: 32px auto;
+  /* Центрує кнопку по горизонталі */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.load-more:hover {
+  background-color: #6c8cff;
+}
+
+/* Клас для приховування кнопки та елементів */
+.hidden {
+  display: none !important;
+}
